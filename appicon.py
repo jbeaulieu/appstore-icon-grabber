@@ -6,20 +6,25 @@ from slugify import slugify
 
 def download_icon(icon_url, title, mask):
 
+    print("Downloading: " + title)
+
     # Download icon, apply mask.
     icon_data = requests.get(icon_url)
     icon = Image.open(io.BytesIO(icon_data.content))
     icon.putalpha(mask)
 
+    # Specify the desired size of icons here. You may list multiple values
+    # Note that this app pulls 512x512 icons from the app store, so any
+    #  larger-resolution output will be upscaled
+    size_list = [512]
+
     # Compute and save thumbnails.
-    for size in [512]:
+    for size in size_list:
         icon_resized = icon.resize((size, size), Image.ANTIALIAS)
         icon_resized.save("icon_{0}_{1}x{1}.png".format(title, size))
 
 
 def download_app_metadata(app_id, mask):
-
-    print("download_app_json {}".format(app_id))
 
     url = "http://itunes.apple.com/us/lookup?id={}".format(app_id)
     r = requests.get(url)
@@ -29,7 +34,6 @@ def download_app_metadata(app_id, mask):
 
     results = r.json()
 
-    print(results["results"])
     meta = results["results"][0]
     icon_url = meta["artworkUrl512"]
     title = slugify(meta["trackCensoredName"])
@@ -63,3 +67,4 @@ def download_apps():
 if __name__ == '__main__':
 
     download_apps()
+    print("Finished")
