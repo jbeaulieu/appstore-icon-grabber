@@ -1,5 +1,6 @@
 import io
 import requests
+import sys
 from PIL import Image
 from slugify import slugify
 
@@ -54,9 +55,7 @@ def download_icon_mask():
 
 def download_apps():
 
-    app_ids = [
-        "284815942"
-    ]
+    app_ids = sys.argv[1:]
 
     #mask = download_icon_mask()
     mask_import = Image.open('mask512.png')
