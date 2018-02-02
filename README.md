@@ -1,3 +1,5 @@
+![alt text](https://github.com/jbeaulieu/appstore-icon-grabber/blob/master/icon.png "App Store Icon Grabber")
+
 # appstore-icon-grabber
 A Python script to download icons from the Apple App Store
 
