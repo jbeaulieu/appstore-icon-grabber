@@ -1,6 +1,6 @@
-![alt text](https://github.com/jbeaulieu/appstore-icon-grabber/blob/master/icon.png "App Store Icon Grabber")
+![alt text](https://github.com/jbeaulieu/appstore-icon-grabber/blob/master/banner.jpg "Project BASIL: App Store Icon Grabber")
 
-# appstore-icon-grabber
+# Project BASIL
 A Python script to download icons from the Apple App Store
 
 Prerequisites
@@ -46,6 +46,4 @@ __Note__ that while this script will output icons at any resolution you'd like v
 Disclaimer
 ----------
 
-__In a nutshell:__ It's not my fault if Apple or the app developer call for your head on a platter because you failed to correctly attribute an icon to its proper owner.
-
-I do not own the icons downloaded using this tool, and chances are neither do you, the user. This tool merely provides easier access to material that is already openly available on the web. It is your job to see to it that anything gained through use of this tool is properly attributed to its original source. I take no responsibility for the use or misuse of any graphics or other information gathered through this script.
+I do not own the icons downloaded using this tool, and chances are neither do you. This tool merely provides easier access to material that is already openly available on the web. It is your job to ensure that anything gained through use of this tool is properly attributed to its original source. I take no responsibility for the misuse of any graphics or other information gathered through this script.
